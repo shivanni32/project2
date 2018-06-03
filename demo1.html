@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+body{
+background-color:powderblue;
+color:black;
+}
+</style>
+</head>
+<body>
+<form >
+<h3 align="center">STUDENT MARKS DETAILS</h3>
+<table align="center" cellspacing="15">
+<tr>
+<td><b>Id  </b></td><td>:    <input type="text" id="id1" size="30" ></td></tr>
+<tr>
+<td><b>Name   </b></td> <td>:   <input type="text" id="name1" size="30"></td></tr>
+<tr><td><b>Perl   </b></td><td>:   <input type="text" id="perl" size="30" ></td></tr>
+<tr><td><b>Python   </b></td><td>:   <input type="text" id="python" size="30"></td></tr>
+<tr><td><b>Dbms   </b></td><td>:   <input type="text" id="dbms" size="30"></td></tr>
+<tr><td><b>Java   </b></td><td>:   <input type="text" id="java" size="30"></td></tr>
+<tr><td><b>R   </b></td><td>:   <input type="text" id="r" size="30"></td></tr></table>
+<center><input type="button" value="  SUBMIT  " onclick= "myf( )" ></center>
+<table align="center" cellspacing="15">
+<tr><td><b>Avg   </b></td><td>:   <input type="text" id="avg"  size="30"></td></tr>
+<tr><td><b>Total   </b> </td><td>:   <input type="text" id="total"size="30" ></td></tr>
+
+<tr><td><b>Percentage   </b> </td><td>:   <input type="text" id="percent" size="30"></td></tr>
+<tr><td><b>Grade   </b> </td><td>:   <input type="text" id="grade" size="30"></td></tr>
+</table>
+</form>
+<script type="text/javascript">
+function myf( ){
+var a= eval(document.getElementById("perl").value);
+var b= eval(document.getElementById("python").value);
+var c= eval(document.getElementById("dbms").value);
+var d= eval(document.getElementById("java").value);
+var e= eval(document.getElementById("r").value);
+var f= eval(document.getElementById("percent").value);
+document.getElementById("total").value=a+b+c+d+e;
+document.getElementById("percent").value=((a+b+c+d+e)/500)*100;
+document.getElementById("avg").value=(a+b+c+d+e)/5;
+var p=(a+b+c+d+e)/5;
+if(p>90)
+document.getElementById("grade").value="A";
+else if(p>80)
+document.getElementById("grade").value="B";
+else if(p>70)
+document.getElementById("grade").value="C";
+else if(p>60)
+document.getElementById("grade").value="D";
+else
+document.getElementById("grade").value="F";
+}
+</script>
+</body>
+</html>
+

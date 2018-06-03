@@ -1,0 +1,29 @@
+<html>
+<body><form>
+enter ur age:
+<input type="text" id="age">
+<input type="button" value="ok" onclick="return myf( )">
+<p id="error1"></p>
+</form>
+<script type="text/javascript" >
+function myf( ){
+var a=document.getElementById("error1");
+a.innerHTML=" ";
+var b=document.getElementById("age").value;
+try
+{
+if(b<0) throw "syntaxerror";
+if(b>100) throw "age can't be greater than 100";
+if(isNaN(b)) throw "it is not a number";
+if(b=="") throw "empty";
+}
+catch(err)
+{
+a.innerHTML=err;
+}
+}
+</script>
+</body>
+</html>
+
+
